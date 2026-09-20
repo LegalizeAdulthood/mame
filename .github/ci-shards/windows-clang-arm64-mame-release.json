@@ -1,6 +1,6 @@
 {
   "$schema": "../ci-shard-map.schema.json",
-  "complete_map_hash": "92c18b44c5761746e4bc1fb7074f6583b2cf771cd2be703ea295de80954d1aed",
+  "complete_map_hash": "70900336fb9b34ddb21a1afb6dd0867067602162dae7dcb9305758864cc904dc",
   "driver_map": {
     "complete_map_hash": "acdca7d829f44059661060aed80cf7b7f35e66ec444ab10959256b23b8e21428",
     "partition_algorithm": "lpt-v1",
@@ -2370,6 +2370,7 @@
       "unidasm"
     ],
     "run_orm": false,
+    "run_sbc_tests": false,
     "artifact_name": "mame-windows-clang-arm64",
     "build": {
       "architecture": "arm64",

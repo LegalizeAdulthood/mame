@@ -445,6 +445,7 @@
         "id",
         "reconcile_list",
         "run_orm",
+        "run_sbc_tests",
         "solution_dir",
         "workflow"
       ],
@@ -492,6 +493,9 @@
           ]
         },
         "run_orm": {
+          "type": "boolean"
+        },
+        "run_sbc_tests": {
           "type": "boolean"
         },
         "solution_dir": {

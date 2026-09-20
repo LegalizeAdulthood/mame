@@ -1,6 +1,6 @@
 {
   "$schema": "../ci-shard-map.schema.json",
-  "complete_map_hash": "07c57b704813b0eb7ba47e94a11f3075d8ea120d30f208df323e6bef84b4835a",
+  "complete_map_hash": "a0bd23102cd3d65f3fb0fb755fc2c0ce9e0be71f757554a7ad8cec0ae60e23c9",
   "driver_map": {
     "complete_map_hash": "91cbb3614892e601e741095a66d35bd5f5144231c1be4909705a01b5038c6c12",
     "partition_algorithm": "lpt-v1",
@@ -2370,6 +2370,7 @@
       "unidasm"
     ],
     "run_orm": false,
+    "run_sbc_tests": false,
     "artifact_name": "mame-macos",
     "build": {
       "architecture": "arm64",

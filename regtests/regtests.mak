@@ -45,6 +45,7 @@
 REGTESTS += \
 	jedutiltest \
 	chdmantest \
+	m6805sbctest \
 
 
 
@@ -65,3 +66,15 @@ jedutiltest:
 chdmantest:
 	@echo Running chdman unittest
 	$(PYTHON) regtests/chdman/chdtest.py
+
+
+
+#-------------------------------------------------
+# m6805sbc
+#-------------------------------------------------
+
+MAME ?= mame
+
+m6805sbctest:
+	@echo Running m6805sbc integration tests
+	$(PYTHON) regtests/drivers/m6805sbc/m6805sbctest.py --executable "$(MAME)"

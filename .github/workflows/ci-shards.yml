@@ -437,6 +437,11 @@ jobs:
     - name: Validate
       run: |
         "$CI_EXECUTABLE" -validate
+    - name: 6805 SBC integration tests
+      if: steps.profile.outputs.run_sbc_tests == 'true'
+      run: |
+        "$CI_PYTHON" regtests/drivers/m6805sbc/m6805sbctest.py \
+          --executable "$CI_EXECUTABLE"
     - name: Reconcile driver list
       if: steps.profile.outputs.reconcile_list != ''
       run: |

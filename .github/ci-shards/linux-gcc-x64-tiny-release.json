@@ -1,6 +1,6 @@
 {
   "$schema": "../ci-shard-map.schema.json",
-  "complete_map_hash": "3e465acf52209b955c9fe940bbf89221b5a1c459b38b4c7ff389794073452db4",
+  "complete_map_hash": "88eb20dbb5a460ccadce7c3a98941af4f10706f91d355e7d32ad29826a4cd102",
   "driver_map": {
     "complete_map_hash": "b0535473edea5a214eb6dfd82daf180f11adc6f9a6279664e4593abc5ffa79b4",
     "partition_algorithm": "lpt-v1",
@@ -152,6 +152,7 @@
       "unidasm"
     ],
     "run_orm": true,
+    "run_sbc_tests": false,
     "artifact_name": "mametiny-linux-gcc",
     "build": {
       "architecture": "x64",

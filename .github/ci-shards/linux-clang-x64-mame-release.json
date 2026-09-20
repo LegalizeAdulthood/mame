@@ -1,6 +1,6 @@
 {
   "$schema": "../ci-shard-map.schema.json",
-  "complete_map_hash": "a6bc9cbf09c374602fb14ef8b99a7b5a31cd803b43b0915f011e986d12b71993",
+  "complete_map_hash": "a1e61a9bc3e45fe275637ac4d8b2a850230b781d6e89ff1e8af87ab80c32c4df",
   "driver_map": {
     "complete_map_hash": "7da9c976b02b9eef00a0fe5b25d0c60e64a73b65d623a8fb7ff1eda2cee544c1",
     "partition_algorithm": "lpt-v1",
@@ -2373,6 +2373,7 @@
       "unidasm"
     ],
     "run_orm": true,
+    "run_sbc_tests": true,
     "artifact_name": "mame-linux-clang",
     "build": {
       "architecture": "x64",
