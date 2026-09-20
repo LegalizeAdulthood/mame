@@ -7,14 +7,25 @@ Lua interface to inspect CPU-visible hardware behavior.
 
 ## What Is Tested
 
-The first probe, `lua/memory_map.lua`, validates the external RAM decode added
-for the SBC driver:
+The `lua/memory_map.lua` probe validates the external RAM decode added for the
+SBC driver:
 
 - Writes to `$0002`, `$0003`, `$000A`, `$000F`, `$0080`, `$0110`, and `$0800`
   persist.
 - A write to the 4 KB ROM socket does not persist.
 - An internal low address such as `$0004` is not accidentally modeled as
   external RAM.
+
+The `lua/acia.lua` probe validates the first MC6850 ACIA wiring:
+
+- `$0006` behaves as the ACIA status/control register rather than RAM or open
+  bus.
+- `$0007` behaves as the ACIA transmit/receive data register rather than RAM
+  or open bus.
+- The default RS-232 terminal leaves CTS and DCD in the ACIA's permissive
+  state.
+- A simple control-register setup and transmit-data write can be issued through
+  the CPU-visible address map.
 
 Additional probes should stay focused on one hardware behavior at a time.
 

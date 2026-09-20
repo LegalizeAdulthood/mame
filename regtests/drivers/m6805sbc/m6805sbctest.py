@@ -149,6 +149,7 @@ def main():
 
 	probes = [
 		("memory_map", THIS_DIR / "lua" / "memory_map.lua"),
+		("acia", THIS_DIR / "lua" / "acia.lua"),
 	]
 
 	success = True
