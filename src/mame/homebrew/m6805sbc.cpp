@@ -30,6 +30,12 @@ private:
 
 void m6805sbc_state::mem_map(address_map &map)
 {
+	// External SRAM decode from 6805_SBC docs/memory-map.txt and design/New_Address_Decode.dig.
+	map(0x0002, 0x0003).ram();
+	map(0x000a, 0x000f).ram();
+	map(0x0080, 0x00ff).ram();
+	map(0x0110, 0x07ff).ram();
+	map(0x0800, 0x0fff).ram();
 	map(0x1000, 0x1fff).rom().region("maincpu", 0x1000);
 }
 
